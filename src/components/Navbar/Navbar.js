@@ -3,6 +3,7 @@ import {AppComponent} from "@core/AppComponent";
 export class Navbar extends AppComponent {
     static className = "navbar orange lighten-1";
     static tagName = "nav";
+    static layout = "default";
 
     constructor($root) {
         super($root, {

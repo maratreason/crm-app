@@ -8,7 +8,6 @@ export class Main {
 
     getRoot() {
         const $root = $.create("div", "app-main-layout");
-
         this.components = this.components.map((Component) => {
             const $el = $.create(Component.tagName, Component.className);
             const component = new Component($el);
@@ -21,10 +20,14 @@ export class Main {
         return $root;
     }
 
+    init() {
+        this.components.forEach((component) => component.init());
+    }
+
     render() {
         this.$el.append(this.getRoot());
 
         // Вызываем init только после append $root
-        this.components.forEach(component => component.init());
+        this.components.forEach((component) => component.init());
     }
 }

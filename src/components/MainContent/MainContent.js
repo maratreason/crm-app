@@ -1,6 +1,6 @@
 import {AppComponent} from "../../core/AppComponent";
 
-export class AppContent extends AppComponent {
+export class MainContent extends AppComponent {
     static className = "app-content";
     static tagName = "main";
 
@@ -11,6 +11,6 @@ export class AppContent extends AppComponent {
     }
 
     toHTML() {
-        return "<h1>App Content Component</h1>";
+        return "";
     }
 }
